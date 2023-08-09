@@ -1,4 +1,4 @@
-#main{
+.main{
     max-width: 130rem;
     margin: auto;
     padding: 5rem;
@@ -8,6 +8,11 @@
     grid-template-rows: repeat(2. 1fr);
     gap: 2rem;
 }
+
+.ocultar{
+    display: none;
+}
+
 .item{
 
     border-radius: 3px;

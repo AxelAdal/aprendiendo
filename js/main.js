@@ -1,4 +1,6 @@
 import { data } from "./data.js";
+import { caja_descripcion } from "./descripcion-del-producto.js";
+
 
 data.forEach((cada_item) =>{
 
@@ -21,3 +23,21 @@ data.forEach((cada_item) =>{
 
 });
 
+//evento ver detalles del producto
+
+let productos = document.querySelectorAll(".item")
+
+
+function saludar() {
+    let caja_descripcion_dom = document.querySelector(".descripcion_del_producto")
+    caja_descripcion_dom.innerHTML = caja_descripcion(this.id);
+
+    let main = document.querySelector("#main")
+    main.classList.add("ocultar")
+}
+
+productos.forEach((cada_elemento)=>{
+
+    cada_elemento.addEventListener("click", saludar)
+
+})

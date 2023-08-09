@@ -5,10 +5,10 @@ let header_contenido =
 `
         <h2>💻  Tecnico ADAL</h2>
         <ul>
-            <li>titulo 1</li>
-            <li>titulo 2</li>
-            <li>titulo 3</li>
-            <li>titulo 4</li>
+            <li>PC</li>
+            <li>Laptop</li>
+            <li>Consola</li>
+            <li>Software</li>
         </ul>
  
 `;
