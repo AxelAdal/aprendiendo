@@ -137,7 +137,7 @@
   
   .Btn::before {
     position: absolute;
-    content: "SUBSCRIBE";
+    content: "COMPRAR";
     color: #ffd277;
     display: flex;
     align-items: center;

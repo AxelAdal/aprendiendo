@@ -12,11 +12,10 @@ export function caja_descripcion(data, main) {
             <h1 class="titulo_principal">${data[main].titulo}</h1>
             <h2 class="descripciones">${data[main].descripcion}</h2>
             <div class="precios">
-              <button class="precio-valor">Q100.00</button>
-              <button class="comprar-btn">Comprar</button>
+              <button class="precio-valor">${data[main].Precio}</button>
               <button class="Btn"></button>
                 <div class="container">
-                    <div class="btn"><a href="#">Hagalo usted mismo</a></div>
+                    <div class="btn"><a href="#">Hacerlo solo</a></div>
                 </div>
             </div>
           </section>
