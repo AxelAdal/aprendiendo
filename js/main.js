@@ -28,16 +28,16 @@ data.forEach((cada_item) =>{
 let productos = document.querySelectorAll(".item")
 
 
-function saludar() {
-    let caja_descripcion_dom = document.querySelector(".descripcion_del_producto")
-    caja_descripcion_dom.innerHTML = caja_descripcion(this.id);
-
-    let main = document.querySelector("#main")
-    main.classList.add("ocultar")
-}
-
-productos.forEach((cada_elemento)=>{
-
-    cada_elemento.addEventListener("click", saludar)
-
-})
+function mostrarDescripcion(event) {
+    
+    let caja_descripcion_DOM = document.querySelector(".descripcion_del_producto");
+  
+    let main = Array.from(productos).indexOf(event.currentTarget);
+  
+    let productDescriptionHTML = caja_descripcion(data, main);
+    caja_descripcion_DOM.innerHTML = productDescriptionHTML;
+  }
+  
+  productos.forEach((cada_elemento) => {
+    cada_elemento.addEventListener("click", mostrarDescripcion);
+  })
