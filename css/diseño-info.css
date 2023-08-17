@@ -1,165 +1,127 @@
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 200px;
-  }
-  
-  .container .btn {
-    height: 50px;
-    margin: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    width: 155px;
-  }
-  
-  .container .btn a {
-    align-items: center;
-    background: rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
-    color: #fff;
-    display: flex;
-    font-size: 18px;
-    font-weight: 700;
-    left: 0;
-    top: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    letter-spacing: 1px;
-    text-decoration: none;
-    overflow: hidden;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(15px);
-    z-index: 1;
-    transition: 0.5s;
-  }
-  
-  .container .btn:hover a {
-    letter-spacing: 2px;
-  }
-  
-  .container .btn a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to left,
-                  rgba(255,255,255,0.15),
-                  transparent);
-    transform: skewX(45deg) translateX(0);
-    transition: 0.5s;
-  }
-  
-  .container .btn:hover a::before {
-    transform: skewX(45deg) translateX(200%);
-  }
-  
-  .container .btn::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -5px;
-    height: 10px;
-    width: 30px;
-    background: rgb(63, 238, 10);
-    border-radius: 10px;
-    transition: 0.5s;
-    transition-delay: 0s;
-  }
-  
-  .container .btn:hover::before {
-    bottom: 0;
-    height: 50%;
-    width: 80%;
-    border-radius: 30px;
-    transition-delay: 0.5s;
-  }
-  
-  .container .btn::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -5px;
-    height: 10px;
-    width: 30px;
-    background: rgb(7, 245, 59);
-    border-radius: 10px;
-    transition: 0.5s;
-    transition-delay: 0s;
-  }
-  
-  .container .btn:hover::after {
-    top: 0;
-    height: 50%;
-    width: 80%;
-    border-radius: 30px;
-    transition-delay: 0.5s;
-  }
-  
-  .container .btn:nth-child(1):before,
-  .container .btn:nth-child(1)::after {
-    background: #0cf318;
-    box-shadow: 0 0 5px #0ffb2e,
-      0 0 15px #2bff59,
-      0 0 30px #32ff2b,
-      0 0 60px #22ff47;
-  }
-  
-  .container .btn:active a {
-    color: #000;
-  }
-  .Btn {
-    width: 140px;
-    height: 40px;
+.caja_btn{
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+
+}
+/***************************************/
+
+.cta {
+  position: relative;
+  margin: 0.5rem;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+ }
+ 
+ .cta:before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+ }
+ 
+ .cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+ }
+ 
+ .cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+ }
+ 
+ .cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+ }
+ 
+ .cta:hover svg {
+  transform: translateX(0);
+ }
+ 
+ .cta:active {
+  transform: scale(0.95);
+ }
+
+/****************************************/
+.btn {
     border: none;
-    border-radius: 10px;
-    background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
-    background-size: 250%;
-    background-position: left;
-    color: #ffd277;
+    width: 140px;
+    height: 50px;
+    color: #fff;
+    z-index: 1;
+    display: flex;
+    margin: 2rem;
+    background: #000;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition-duration: 1s;
-    overflow: hidden;
-  }
-  
-  .Btn::before {
+   }
+   
+  .btn p {
+    margin: 0 auto;
+    align-self: center;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+   }
+   
+   .btn::after {
     position: absolute;
-    content: "COMPRAR";
-    color: #ffd277;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 97%;
-    height: 90%;
-    border-radius: 8px;
-    transition-duration: 1s;
-    background-color: rgba(0, 0, 0, 0.842);
-    background-size: 200%;
-  }
-  
-  .Btn:hover {
-    background-position: right;
-    transition-duration: 1s;
-  }
-  
-  .Btn:hover::before {
-    background-position: right;
-    transition-duration: 1s;
-  }
-  
-  .Btn:active {
-    transform: scale(0.95);
-  }
+    content: "";
+    width: 100%;
+    z-index: -1;
+    height: 10%;
+    bottom: 0;
+    clip-path: polygon(0% 74%, 4% 75%, 8% 76%, 11% 77%, 15% 78%, 20% 78%, 25% 77%, 32% 77%, 37% 75%, 40% 74%, 43% 74%, 46% 73%, 52% 72%, 57% 72%, 65% 74%, 66% 75%, 71% 78%, 75% 82%, 81% 86%, 83% 88%, 88% 91%, 90% 94%, 94% 96%, 98% 98%, 100% 100%, 82% 100%, 0 100%);
+    background: #8792eb;
+    transition: 0.2s ease;
+   }
+
+    .btn::before {
+    position: absolute;
+    content: "";
+   /*   bottom: 80%; */
+    transform: rotate(180deg);
+    width: 100%;
+    height: 10%;
+    transition: 0.2s ease;
+   /*   bottom:; */
+    z-index: -1;
+    clip-path: polygon(0% 74%, 4% 75%, 8% 76%, 11% 77%, 15% 78%, 20% 78%, 25% 77%, 32% 77%, 37% 75%, 40% 74%, 43% 74%, 46% 73%, 52% 72%, 57% 72%, 65% 74%, 66% 75%, 71% 78%, 75% 82%, 81% 86%, 83% 88%, 88% 91%, 90% 94%, 94% 96%, 98% 98%, 100% 100%, 82% 100%, 0 100%);
+    background: #8792eb;
+   }
+   
+   .btn:hover::after {
+    clip-path: polygon(0 30%, 9% 34%, 7% 39%, 11% 43%, 13% 33%, 17% 30%, 24% 34%, 25% 35%, 30% 31%, 30% 38%, 39% 33%, 35% 43%, 43% 45%, 55% 46%, 65% 74%, 67% 66%, 81% 57%, 75% 82%, 81% 86%, 83% 88%, 88% 91%, 90% 94%, 94% 96%, 98% 98%, 100% 100%, 82% 100%, 0 100%);
+    height: 80%;
+   }
+   
+   .btn:hover::before {
+    clip-path: polygon(0 30%, 9% 34%, 7% 39%, 11% 43%, 13% 33%, 17% 30%, 24% 34%, 25% 35%, 30% 31%, 30% 38%, 39% 33%, 35% 43%, 43% 45%, 55% 46%, 65% 74%, 67% 66%, 81% 57%, 75% 82%, 81% 86%, 83% 88%, 88% 91%, 90% 94%, 94% 96%, 98% 98%, 100% 100%, 82% 100%, 0 100%);
+    height: 80%;
+   }
+   
+   
