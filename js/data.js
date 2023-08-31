@@ -2,7 +2,7 @@ export let data = [
 
     {
         titulo: "Cambio de pasta termina",
-        img: "https://st2.depositphotos.com/12445648/47356/i/450/depositphotos_473565160-stock-photo-male-asian-music-producer-arranging.jpg",
+        img: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/01/pasta-termica-procesador-2588109.jpg?tf=3840x",
         descripcion: "Como cambiar la pasta termina del procesador",
         Precio:"Q100.00",
         Herramientas:[
@@ -105,3 +105,10 @@ export let data = [
         ]
     }       
 ]
+
+data = data.map((obj, index) => {
+    return {
+      ...obj,
+      ID: index + 1,
+    };
+  });
